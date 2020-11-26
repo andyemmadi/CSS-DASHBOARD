@@ -5,12 +5,14 @@
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<title>CSS Grid Admin Dashboard</title>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="index.js"></script>
 </head>
 
 <body>
+	<button onclick="callJSFun()">CALL FUN</button>
 	<div class="container">
 		<nav class="navbar">
-			<div class="nav_icon" onclick="toggleSidebar()">
+			<div class="nav__icon" onclick="toggleSidebar()">
 				<i class="fa fa-bars"></i>
 			</div>
 			<div class="navbar__left">
@@ -154,6 +156,11 @@
 					<i class="fa fa-archive"></i>
 					<a href="#">Warehouse</a>
 				</div>
+				<h2>LEAVE</h2>
+				<div class="sidebar__link">
+					<i class="fa fa-money"></i>
+					<a href="#">Leave</a>
+				</div>
 				<div class="sidebar__link">
 					<i class="fa fa-handshake-o"></i>
 					<a href="#">Contracts</a>
@@ -191,5 +198,4 @@
 			</div>
 		</div>
 	</div>
-
 </body>

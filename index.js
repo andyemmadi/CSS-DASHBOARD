@@ -1,6 +1,32 @@
 // Import stylesheets
 import "./style.css";
 
+/**
+ * sidebar toggle code;
+ */
+
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
+var sidebarCloseIcon = document.getElementById("sidebarIcon");
+
+function toggleSidebar() {
+  if (!sidebarOpen) {
+    sidebar.classList.add("sidebar_responsive");
+    sidebarOpen = true;
+  }
+}
+
+function closeSidebar() {
+  if (sidebarOpen) {
+    sidebar.classList.remove("sidebar_responsive");
+    sidebarOpen = false;
+  }
+}
+
+function callJSFun() {
+  window.alert("its called !!");
+}
+
 var options = {
   series: [
     {
@@ -60,25 +86,3 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#apex1"), options);
 chart.render();
-
-/**
- * sidebar toggle code;
- */
-
-var sidebarOpen = false;
-var sidebar = document.getElementById("sidebar");
-var sidebarCloseIcon = document.getElementById("sidebarIcon");
-
-function toggleSidebar() {
-  if (!sidebarOpen) {
-    sidebar.classList.add("sidebar_responsive");
-    sidebarOpen = true;
-  }
-}
-
-function closeSidebar() {
-  if (sidebarOpen) {
-    sidebar.classList.remove("sidebar_responsive");
-    sidebarOpen = false;
-  }
-}
